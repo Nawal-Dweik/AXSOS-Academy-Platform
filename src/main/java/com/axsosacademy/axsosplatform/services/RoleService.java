@@ -1,6 +1,7 @@
 package com.axsosacademy.axsosplatform.services;
 
 
+import com.axsosacademy.axsosplatform.models.User;
 import com.axsosacademy.axsosplatform.repositories.RoleRepository;
 
 public class RoleService {
@@ -11,6 +12,8 @@ public class RoleService {
         this.roleRepository = roleRepository;
     }
 
-
+    public String getRoleOfUser(User user){
+        return roleRepository.findRoleByUser(user);
+    }
 
 }
