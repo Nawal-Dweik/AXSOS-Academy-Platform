@@ -2,10 +2,12 @@ package com.axsosacademy.axsosplatform.services;
 
 import com.axsosacademy.axsosplatform.models.Message;
 import com.axsosacademy.axsosplatform.repositories.MessageRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MessageService {
     private final MessageRepository messageRepository;
 

@@ -6,10 +6,12 @@ import com.axsosacademy.axsosplatform.models.User;
 import com.axsosacademy.axsosplatform.repositories.AlgorithmRepository;
 import com.axsosacademy.axsosplatform.repositories.TopicRepository;
 import com.axsosacademy.axsosplatform.repositories.UserRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class TopicService {
     private TopicRepository topicRepository;
     private UserRepository userRepository;
