@@ -12,6 +12,7 @@ public class UserService {
     private final UserRepository userRepository;
 
     public UserService(UserRepository userRepository) {
+
         this.userRepository = userRepository;
     }
 
@@ -38,6 +39,7 @@ public class UserService {
         }
     }
 
+    // <---------- AUTHENTICATE USER BEFORE LOGIN ---------->
     public boolean authenticateUser(String email, String password) {
         User user = userRepository.findByEmail(email);
         if (user == null) {

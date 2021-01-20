@@ -3,6 +3,10 @@ package com.axsosacademy.axsosplatform.repositories;
 import com.axsosacademy.axsosplatform.models.User;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<User, Long> {
+import java.util.List;
 
+public interface UserRepository extends CrudRepository<User, Long> {
+    User findByEmail(String email);
+    User findByName(String name);
+    List<User> findUsersByRole(String type);
 }
