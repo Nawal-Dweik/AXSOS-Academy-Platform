@@ -38,9 +38,9 @@ public class Algorithm {
 
     //////////////////////////////////
 //    RELATION
-
-    @OneToMany(mappedBy="algorithm", fetch = FetchType.LAZY)
-    private List<Topic> topics;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="algorithmTopic_id")
+    private Topic topic;
 
     @OneToMany(mappedBy="algorithm", fetch = FetchType.LAZY)
     private List<User> users;
@@ -49,11 +49,12 @@ public class Algorithm {
 
     }
 
-    public Algorithm(String title, String question, String answer, List<Topic> topics, List<User> users) {
+
+    public Algorithm(String title, String question, String answer, Topic topic, List<User> users) {
         this.title = title;
         this.question = question;
         this.answer = answer;
-        this.topics = topics;
+        this.topic = topic;
         this.users = users;
     }
 
@@ -105,12 +106,12 @@ public class Algorithm {
         this.updatedAt = updatedAt;
     }
 
-    public List<Topic> getTopics() {
-        return topics;
+    public Topic getTopic() {
+        return topic;
     }
 
-    public void setTopics(List<Topic> topics) {
-        this.topics = topics;
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 
     public List<User> getUsers() {
