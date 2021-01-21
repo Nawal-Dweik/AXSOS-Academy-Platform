@@ -23,7 +23,7 @@ public class Users {
     }
 
     @RequestMapping("/registration")
-    public String registerForm(@Valid @ModelAttribute("user") User user, HttpSession session) {
+    public String registerForm( @ModelAttribute("user") User user, HttpSession session) {
         Long userId = (Long) session.getAttribute("userId");
         if(userId != null) {
             return "redirect:/registration";    //this needs to change

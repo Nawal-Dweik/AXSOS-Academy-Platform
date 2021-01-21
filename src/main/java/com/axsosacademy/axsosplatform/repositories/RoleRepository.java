@@ -11,5 +11,4 @@ import java.util.List;
 public interface RoleRepository extends CrudRepository<Role, Long> {
     List<Role> findAll();
 
-//    String findRoleByUser(User user);
 }
