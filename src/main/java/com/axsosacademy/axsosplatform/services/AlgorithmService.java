@@ -19,5 +19,9 @@ public class AlgorithmService {
         return algorithmRepository.findAll();
     }
 
+    public Algorithm createAlgorithm(Algorithm algorithm){
+        return algorithmRepository.save(algorithm);
+    }
+
 
 }
