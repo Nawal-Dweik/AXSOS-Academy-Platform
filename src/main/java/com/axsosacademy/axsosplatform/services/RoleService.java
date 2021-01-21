@@ -14,8 +14,6 @@ public class RoleService {
         this.roleRepository = roleRepository;
     }
 
-    public String getRoleOfUser(User user){
-        return roleRepository.findRoleByUser(user);
-    }
+
 
 }
