@@ -22,9 +22,8 @@ public class Topic {
     private Date createdAt;
     private Date updatedAt;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="algorithmTopic_id")
-    private Algorithm algorithm;
+    @OneToMany(mappedBy="topic", fetch = FetchType.LAZY)
+    private List<Algorithm> algorithms;
 
     @PrePersist
     protected void onCreate() {
@@ -40,10 +39,10 @@ public class Topic {
 
     }
 
-    public Topic(String title, String description, Algorithm algorithm) {
+    public Topic(@NotNull String title, @NotNull String description, List<Algorithm> algorithms) {
         this.title = title;
         this.description = description;
-        this.algorithm = algorithm;
+        this.algorithms = algorithms;
     }
 
     public Long getId() {
@@ -86,11 +85,11 @@ public class Topic {
         this.updatedAt = updatedAt;
     }
 
-    public Algorithm getAlgorithm() {
-        return algorithm;
+    public List<Algorithm> getAlgorithms() {
+        return algorithms;
     }
 
-    public void setAlgorithm(Algorithm algorithm) {
-        this.algorithm = algorithm;
+    public void setAlgorithms(List<Algorithm> algorithms) {
+        this.algorithms = algorithms;
     }
 }
