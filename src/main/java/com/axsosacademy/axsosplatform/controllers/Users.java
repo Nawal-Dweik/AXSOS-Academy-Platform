@@ -60,7 +60,7 @@ public class Users {
         return "homepage.jsp";
     }
 
-    
+
 
     @RequestMapping("/logout")
     public String logout(HttpSession session) {
