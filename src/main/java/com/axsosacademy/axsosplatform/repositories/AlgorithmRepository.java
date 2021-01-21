@@ -9,6 +9,7 @@ import java.util.List;
 @Repository
 public interface AlgorithmRepository extends CrudRepository<Algorithm, Long> {
     public List<Algorithm> findAll();
+    public void deleteAlgorithmById(Long id);
 
 
 }
