@@ -2,6 +2,7 @@ package com.axsosacademy.axsosplatform.services;
 
 import com.axsosacademy.axsosplatform.models.Algorithm;
 import com.axsosacademy.axsosplatform.models.Category;
+import com.axsosacademy.axsosplatform.models.Topic;
 import com.axsosacademy.axsosplatform.repositories.AlgorithmRepository;
 import com.axsosacademy.axsosplatform.repositories.CategoryRepository;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,12 @@ public class CategoryService {
         this.categoryRepository = categoryRepository;
     }
 
-    public List<Category> getAllCategories(){
+    public List<Category> findAllCategories(){
         return categoryRepository.findAll();
+    }
+
+    public Category create(Category category) {
+
+        return categoryRepository.save(category);
     }
 }

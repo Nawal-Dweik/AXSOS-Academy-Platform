@@ -36,8 +36,6 @@ public class Algorithm {
         this.updatedAt = new Date();
     }
 
-    //////////////////////////////////
-//    RELATION
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="algorithmTopic_id")
     private Topic topic;
