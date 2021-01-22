@@ -14,23 +14,60 @@
           rel="stylesheet"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #f1ebeb;
+            animation-name: example;
+            animation-duration: 9s;
+        }
+
+        @keyframes example {
+            0%   {background-color: #f1ebeb;}
+            0%   {background-color: #bbb8b8;}
+            25%  {background-color: #dcc6c6;}
+            25%  {background-color: #f1ebeb;}
+            50%  {background-color: #f6d9ff;}
+            50%  {background-color: #bbb8b8;}
+            50%  {background-color: #d8cddc;}
+            100% {background-color: #ebdfef;}
+            100% {background-color: #dcc6c6;}
+            100% {background-color: #f6d9ff;}
+            100% {background-color: #ebdfef;}
+
+        }
+        div{
+            margin-left: 300px;
+        }
+        .n{
+            width: 1000px;
+            margin-left: 300px;
+        }
+
+    </style>
 </head>
 <body>
-<label path="groups">Generate Groups of </label>
-<input path="groups" type="text"/>
-<button>Go</button>
+<div>
+    <label path="groups">Generate Groups of </label>
+    <input path="groups" type="text"/>
+    <button>Go</button>
+</div>
 <br/>
-<label path="topic">Topic</label>
-<select  path="topic">
-    <c:forEach items="${allTopics}" var="tpc">
-        <option value="${tpc.id}"><c:out value="${tpc.title}"/></option>
-    </c:forEach>
-   <%-- <option value="addTopic"><a href="/addTopic">Add a Topic</a></option>--%>
-</select>
+<div>
+    <label path="topic">Topic</label>
+    <select  path="topic">
+        <c:forEach items="${allTopics}" var="tpc">
+            <option value="${tpc.id}"><c:out value="${tpc.title}"/></option>
+        </c:forEach>
+    </select>
 
-<a href="/addTopic">Add a Topic</a>
+    <a href="/addTopic">Add a Topic</a>
 
-    <table class="table">
+</div>
+
+
+    <table class="n table table-striped">
         <thead>
         <tr>
             <th scope="col">Title</th>
