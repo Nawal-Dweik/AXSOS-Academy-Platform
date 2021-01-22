@@ -8,85 +8,93 @@
     <meta charset="UTF-8">
     <title>Belt Reviewer</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <script defer
-            src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 </head>
 <body>
-<div class="container">
-    <div class="notification">
-        <p class="title">Welcome</p>
-    </div>
-
-    <section>
-        <div class="columns">
-
-            <!-- registration -->
-            <div class="column">
-                <h3 class="title">Register</h3>
-                <p>
-                    <form:errors path="user.*"/>
-                </p>
 
 
-                <form:form method="POST" action="/registration" modelAttribute="user">
-                    <table class="mytable">
+                <p><form:errors path="user.*"/></p>
+                <c:out value="${error}"/>
+<%--         registr form--%>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
 
-                        <tr>
-                            <td class="is-one-thrid"><form:label path="name">Name:</form:label></td>
-                            <td class="is-two-thrids"><form:input path="name" class="input"/></td>
-                        </tr>
-                        <tr>
-                            <td class="is-one-thrid"><form:label path="email">Email:</form:label></td>
-                            <td class="is-two-thrids"><form:input path="email" class="input"/></td>
-                        </tr>
-                        <tr>
-                            <td class="is-one-thrid"><form:label path="password">password:</form:label></td>
-                            <td class="is-two-thrids"><form:input path="password" type="password" class="input"/></td>
-                        </tr>
-                        <tr>
-                            <td class="is-one-thrid"><form:label path="passwordConfirmation">password Confirmation:</form:label></td>
-                            <td class="is-two-thrids"><form:input path="passwordConfirmation" type="password" class="input"/></td>
-                        </tr>
+<%--            <h1>Create Account</h1>--%>
 
+            <form:form method="POST" action="/registration" modelAttribute="user">
+                <form:label path="name"></form:label>
+                <form:input path="name"  placeholder="Name" />
 
-                    </table>
-                    <div class="buttons has-addons is-right">
-                        <input type="submit" value="Register!" class="button"/>
-                    </div>
-                </form:form>
-            </div>
+                <form:label path="email"></form:label>
+                <form:input path="email" placeholder="Email" />
+
+                <form:label path="password"></form:label>
+                <form:input path="password" type="password" placeholder="Password" />
+
+                <form:label path="passwordConfirmation" ></form:label>
+                <form:input path="passwordConfirmation" type="password" placeholder="Password Confirmation" />
+                <button input type="submit" value="Register!">Sign Up</button>
+            </form:form>
+        </div>
 
 
-            <!-- login -->
-            <div class="column">
-                <div class="gap"></div>
-                <h3 class="title">Login</h3>
-                <p>
+<%--        login form--%>
+        <div class="form-container sign-in-container">
+            <form method="post" action="/login">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="https://www.facebook.com/AXSOSAcademy" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/school/axsos-academy/" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                </div>
 
-                    <c:out value="${error}"/>
-                </p>
+                <span>or use your account</span>
 
-                <form method="post" action="/login">
-                    <table class="mytable">
-                        <tr>
-                            <td class="is-one-thrid"><label type="email" for="email">Email</label></td>
-                            <td class="is-two-thrids"><input type="text" id="email" name="email" class="input"/></td>
-                        </tr>
-                        <tr>
-                            <td class="is-one-thrid"><label for="password">Password</label></td>
-                            <td class="is-two-thrids"><input type="password" id="password" name="password" class="input"/></td>
-                        </tr>
+                <label type="email" for="email" ></label>
+                <input type="text" id="email" name="email" placeholder="Email"/>
 
-                    </table>
-                    <div class="buttons has-addons is-right">
-                        <input type="submit" value="Login" class="button"/>
-                    </div>
-                </form>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" />
+                <br>
+                <button type="submit" value="Login">Sign In</button>
+            </form>
+        </div>
+
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
             </div>
         </div>
-    </section>
-</div>
+    </div>
+
+
+
+<%--                code javascript--%>
+    <script>
+
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+
+    </script>
+
 </body>
 </html>

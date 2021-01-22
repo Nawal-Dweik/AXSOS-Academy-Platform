@@ -11,26 +11,41 @@
     <title>Axsos Acadmy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
+<style>
+    .logo{
+        margin-left: 20px;
+    }
+    .logout{
+        margin: 700px;
+        color: gray;
+        text-decoration: none;
+    }
+
+</style>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="/img/logo.png" width="200px"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <p class="mini_nav">
-        <a class="logout" href="/logout">Logout</a>
-    </p>
-    </div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.png" width="200px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+                <p class="mini_nav">
+                    <a class="logout" href="/logout">Logout</a>
+                 </p>
+
+    </nav>
+    <br><br>
 <center>
-        <div>
+    <div>
             <a class="navbar-brand" href="#"><img src="/img/alg1.png" width="350px"></a>
             <a class="navbar-brand" href="#"><img src="/img/alg2.png" width="350px"></a>
+            <a class="navbar-brand" href="/index.html"><img src="/img/alg5.png" width="350px"></a>
             <br><br>
             <a class="navbar-brand" href="https://discord.com/"><img src="/img/alg3.png" width="350px"></a>
             <a class="navbar-brand" href="http://learn.codingdojo.com/"><img src="/img/alg4.png" width="350px"></a>
-        </div>
+    </div>
 </center>
 
 </body>

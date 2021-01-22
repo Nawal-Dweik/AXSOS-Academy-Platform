@@ -1,5 +1,6 @@
 package com.axsosacademy.axsosplatform.controllers;
 
+
 import com.axsosacademy.axsosplatform.models.User;
 import com.axsosacademy.axsosplatform.services.UserService;
 import com.axsosacademy.axsosplatform.validators.UserValidator;
@@ -7,10 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.util.List;
 
 @Controller
 public class Users {
@@ -38,8 +37,11 @@ public class Users {
         }
         User u = userService.registerUser(user);
         session.setAttribute("userId", u.getId());
-        return "redirect:/tasks";
+        return "redirect:/home";
     }
+
+
+//    login
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginUser(@RequestParam("email") String email, @RequestParam("password") String password, Model model,
@@ -55,19 +57,26 @@ public class Users {
         }
     }
 
+
+//    homepage
+
     @RequestMapping("/home")
     public String homepage(HttpSession session, Model model) {
         return "homepage.jsp";
     }
 
 
+//    logout
 
     @RequestMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();
         return "redirect:/";
     }
+
+
 }
+
 
 
 
