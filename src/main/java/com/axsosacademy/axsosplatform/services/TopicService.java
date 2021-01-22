@@ -17,7 +17,13 @@ public class TopicService {
     private UserRepository userRepository;
     private AlgorithmRepository algorithmRepository;
 
-//    save Algo.
+    public TopicService(TopicRepository topicRepository, UserRepository userRepository, AlgorithmRepository algorithmRepository) {
+        this.topicRepository = topicRepository;
+        this.userRepository = userRepository;
+        this.algorithmRepository = algorithmRepository;
+    }
+
+    //    save Algo.
     public Algorithm save(Algorithm algorithm) {
 
         return algorithmRepository.save(algorithm);
@@ -28,7 +34,7 @@ public class TopicService {
         return topicRepository.save(topic);
     }
 //    return all topics
-    public List<Topic> findAll() {
+    public List<Topic> findAllTopics() {
         return topicRepository.findAll();
     }
 

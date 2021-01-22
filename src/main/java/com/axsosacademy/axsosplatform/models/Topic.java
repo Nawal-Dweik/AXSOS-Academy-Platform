@@ -15,9 +15,6 @@ public class Topic {
     @NotNull
     private String title;
 
-    @NotNull
-    private String description;
-
     @Column(updatable = false)
     private Date createdAt;
     private Date updatedAt;
@@ -39,9 +36,9 @@ public class Topic {
 
     }
 
-    public Topic(@NotNull String title, @NotNull String description, List<Algorithm> algorithms) {
+    public Topic(@NotNull String title, List<Algorithm> algorithms) {
         this.title = title;
-        this.description = description;
+
         this.algorithms = algorithms;
     }
 
@@ -59,14 +56,6 @@ public class Topic {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public Date getCreatedAt() {

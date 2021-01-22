@@ -38,7 +38,7 @@ public class Users {
         }
         User u = userService.registerUser(user);
         session.setAttribute("userId", u.getId());
-        return "redirect:/tasks";
+        return "redirect:/home";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
