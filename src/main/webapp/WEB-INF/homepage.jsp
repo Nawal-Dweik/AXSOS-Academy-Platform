@@ -26,7 +26,7 @@
 <center>
         <div>
             <a class="navbar-brand" href="/algorithms/showTopics"><img src="/img/alg1.png" width="350px"></a>
-            <a class="navbar-brand" href="#"><img src="/img/alg2.png" width="350px"></a>
+            <a class="navbar-brand" href="/groupActivity/showCategories"><img src="/img/alg2.png" width="350px"></a>
             <br><br>
             <a class="navbar-brand" href="https://discord.com/"><img src="/img/alg3.png" width="350px"></a>
             <a class="navbar-brand" href="http://learn.codingdojo.com/"><img src="/img/alg4.png" width="350px"></a>

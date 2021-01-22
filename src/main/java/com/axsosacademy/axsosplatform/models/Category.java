@@ -4,6 +4,7 @@ import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -30,17 +31,16 @@ public class Category {
         this.updatedAt = new Date();
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="groupActivity_id")
-    private GroupActivity  groupActivity;
+    @OneToMany(mappedBy="category", fetch = FetchType.LAZY)
+    private List<GroupActivity> groupActivities;
 
     public Category() {
 
     }
 
-    public Category(String name, GroupActivity groupActivity) {
+    public Category(String name, List<GroupActivity> groupActivities) {
         this.name = name;
-        this.groupActivity = groupActivity;
+        this.groupActivities = groupActivities;
     }
 
     public Long getId() {
@@ -75,11 +75,11 @@ public class Category {
         this.updatedAt = updatedAt;
     }
 
-    public GroupActivity getGroupActivity() {
-        return groupActivity;
+    public List<GroupActivity> getGroupActivities() {
+        return groupActivities;
     }
 
-    public void setGroupActivity(GroupActivity groupActivity) {
-        this.groupActivity = groupActivity;
+    public void setGroupActivities(List<GroupActivity> groupActivities) {
+        this.groupActivities = groupActivities;
     }
 }
