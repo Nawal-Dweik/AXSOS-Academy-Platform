@@ -43,11 +43,7 @@ public class AdminController {
     //Create a new algorithm
     @PostMapping("/algorithms/new")
     public String createAlgorithm(@Valid @ModelAttribute("algorithm") Algorithm algorithm, BindingResult result, Model model, HttpSession session, @RequestParam Map<String,String> body) {
-        if(result.hasErrors()) {
-
-            return "/topicsPageAdmin.jsp";
-        }
-        this.algorithmService.createAlgorithm(algorithm);
+        this.algorithmService.createAlgorithm(algorithm.getTopic(),algorithm);
         return "redirect:/algorithms/showTopics";
     }
 
@@ -62,6 +58,17 @@ public class AdminController {
         this.topicService.create(topic);
         return "redirect:/algorithms/showTopics";
     }
+
+    //Get algorithm for a specific topic Admin Page
+    @GetMapping("/algorithms/{topicId}")
+    public String showAlgorithms(@ModelAttribute("algorithm") Algorithm algorithm,@PathVariable("topicId") Long id, Model model, HttpSession session) {
+        Topic selectedTopic = topicService.findOneById(id);
+        List<Algorithm> topicAlgorithms = selectedTopic.getAlgorithms();
+        model.addAttribute("topicAlgorithms",topicAlgorithms);
+        model.addAttribute("selectedTopic",selectedTopic);
+        return "/algorithmsPageAdmin.jsp";
+    }
+
 
     //***********************************************************************************************
     //Admin Group Activity Process
@@ -93,5 +100,7 @@ public class AdminController {
         this.categoryService.create(category);
         return "redirect:/groupActivity/showCategories";
     }
+
+
 
 }

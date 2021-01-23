@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
     <title>Topics of Algorithms</title>
@@ -14,38 +15,7 @@
           rel="stylesheet"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
-    <style>
-        body {
-            width: 100%;
-            height: 100%;
-            background-color: #f1ebeb;
-            animation-name: example;
-            animation-duration: 9s;
-        }
 
-        @keyframes example {
-            0%   {background-color: #f1ebeb;}
-            0%   {background-color: #bbb8b8;}
-            25%  {background-color: #dcc6c6;}
-            25%  {background-color: #f1ebeb;}
-            50%  {background-color: #f6d9ff;}
-            50%  {background-color: #bbb8b8;}
-            50%  {background-color: #d8cddc;}
-            100% {background-color: #ebdfef;}
-            100% {background-color: #dcc6c6;}
-            100% {background-color: #f6d9ff;}
-            100% {background-color: #ebdfef;}
-
-        }
-        div{
-            margin-left: 300px;
-        }
-        .n{
-            width: 1000px;
-            margin-left: 300px;
-        }
-
-    </style>
 </head>
 <body>
 <div>
@@ -53,19 +23,33 @@
     <input path="groups" type="text"/>
     <button>Go</button>
 </div>
+
 <br/>
+<form:form action="/algorithms/new" method="post" modelAttribute="algorithm">
 <div>
-    <label path="topic">Topic</label>
-    <select  path="topic">
+    <form:label path="topic">Topic</form:label>
+    <form:select  path="topic">
         <c:forEach items="${allTopics}" var="tpc">
             <option value="${tpc.id}"><c:out value="${tpc.title}"/></option>
         </c:forEach>
-    </select>
+    </form:select>
 
     <a href="/addTopic">Add a Topic</a>
 
 </div>
+Upload Files
 
+
+    <form:label path="title">Algorithm title</form:label>
+    <form:input path="title" type="text"/>
+
+<form:label path="question">Algorithm</form:label>
+<form:input path="question" type="text"/>
+
+<form:label path="answer">Answer</form:label>
+<form:input path="answer" type="text"/>
+    <form:button>Add Algorithm</form:button>
+</form:form>
 
     <table class="n table table-striped">
         <thead>
@@ -77,7 +61,7 @@
         <tbody>
         <c:forEach items="${allTopics}" var="t">
         <tr>
-            <td>${t.title}</td>
+            <td><a href="/algorithms/${t.id}">${t.title}</a></td>
             <td>Delete</td>
         </tr>
         </c:forEach>
