@@ -61,7 +61,7 @@ public class AdminController {
     @PostMapping("/algorithms/new")
     public String createAlgorithm(@Valid @ModelAttribute("algorithm") Algorithm algorithm, BindingResult result, Model model, HttpSession session, @RequestParam Map<String,String> body) {
         this.algorithmService.createAlgorithm(algorithm.getTopic(),algorithm);
-        return "redirect:/algorithms/showTopics";
+        return "redirect:/admin/algorithms/showTopics";
     }
 
     // Add a Topic inside topics dropdown
@@ -73,7 +73,7 @@ public class AdminController {
     @PostMapping("/addTopic")
     public String createTopic(@Valid @ModelAttribute("topic") Topic topic, BindingResult result, Model model, HttpSession session, @RequestParam Map<String,String> body) {
         this.topicService.create(topic);
-        return "redirect:/algorithms/showTopics";
+        return "redirect:/admin/algorithms/showTopics";
     }
 
     //Get algorithm for a specific topic Admin Page
@@ -118,14 +118,14 @@ public class AdminController {
     @PostMapping("/addCategory")
     public String createCategory(@Valid @ModelAttribute("category") Category category, BindingResult result, Model model, HttpSession session, @RequestParam Map<String,String> body) {
         this.categoryService.create(category);
-        return "redirect:/groupActivity/showCategories";
+        return "redirect:/admin/groupActivity/showCategories";
     }
 
     //Create a new group activity
     @PostMapping("/groupActivity/new")
     public String createGroupActivity(@Valid @ModelAttribute("groupActivity") GroupActivity groupActivity, BindingResult result, Model model, HttpSession session, @RequestParam Map<String,String> body) {
         this.groupActivityService.createGroupActivity(groupActivity.getCategory(),groupActivity);
-        return "redirect:/groupActivity/showCategories";
+        return "redirect:/admin/groupActivity/showCategories";
     }
 
     //Get group activity for a specific category Admin Page
