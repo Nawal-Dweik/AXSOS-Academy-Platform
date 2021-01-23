@@ -22,6 +22,8 @@
     <thead>
     <tr>
         <th scope="col">Title</th>
+        <th scope="col">Algorithm Question</th>
+        <th scope="col">Algorithm Answer</th>
         <th scope="col"></th>
     </tr>
     </thead>
@@ -29,6 +31,8 @@
     <c:forEach items="${topicAlgorithms}" var="alg">
         <tr>
             <td>${alg.title}</td>
+            <td>Download</td>
+            <td>Download</td>
             <td>Delete</td>
         </tr>
     </c:forEach>
