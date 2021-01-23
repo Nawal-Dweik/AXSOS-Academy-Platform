@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         </nav>
 
-        <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.png" width="200px"></a>
+        <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
 
             <form:form action="/addCategory" method="post" modelAttribute="category">
 

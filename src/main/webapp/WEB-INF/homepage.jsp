@@ -16,8 +16,21 @@
         margin-left: 20px;
     }
     .logout{
-        margin: 700px;
+        margin: 0px 70px;
         color: gray;
+        text-decoration: none;
+    }
+
+    p{
+        margin-top: 0 !important;
+        margin-bottom: 0rem !important;
+        margin-inline: auto !important;
+    }
+
+    .text-center p-3{
+        background-color: #f8f9fa!important;
+    }
+    a{
         text-decoration: none;
     }
 
@@ -25,31 +38,39 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.png" width="200px"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-            </button>
+        <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
+
+            <p class="mini_nav">
+                <a class="logout" href="/algorithms/showTopics">Morning Algorithm</a>
+
+                <a class="logout" href="/groupActivity/showCategories">Group Activity</a>
+
+                <a class="logout" href="/index.html">Lobby</a>
 
 
-                <p class="mini_nav">
-                    <a class="logout" href="/logout">Logout</a>
-                 </p>
-
+                <a class="logout" href="/logout">Logout</a>
+             </p>
     </nav>
     <br><br>
 <center>
-
-
     <div>
         <a class="navbar-brand" href="/algorithmsProcess"><img src="/img/alg1.png" width="350px"></a>
         <a class="navbar-brand" href="/groupActivitiesProcess"><img src="/img/alg2.png" width="350px"></a>
             <a class="navbar-brand" href="/index.html"><img src="/img/alg5.png" width="350px"></a>
-
             <br><br>
             <a class="navbar-brand" href="https://discord.com/"><img src="/img/alg3.png" width="350px"></a>
             <a class="navbar-brand" href="http://learn.codingdojo.com/"><img src="/img/alg4.png" width="350px"></a>
     </div>
 </center>
+  <br>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3">
+            © 2021 Copyright:
+            <a class="text-dark" href="https://academy.axsos.ps/">Axsos Acadmy</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 
 </body>
 </html>
