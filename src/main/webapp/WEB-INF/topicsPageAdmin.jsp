@@ -10,45 +10,25 @@
 <html>
 <head>
     <title>Topics of Algorithms</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-    <style>
-        body {
-            width: 100%;
-            height: 100%;
-            background-color: #f1ebeb;
-            animation-name: example;
-            animation-duration: 9s;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-        @keyframes example {
-            0%   {background-color: #f1ebeb;}
-            0%   {background-color: #bbb8b8;}
-            25%  {background-color: #dcc6c6;}
-            25%  {background-color: #f1ebeb;}
-            50%  {background-color: #f6d9ff;}
-            50%  {background-color: #bbb8b8;}
-            50%  {background-color: #d8cddc;}
-            100% {background-color: #ebdfef;}
-            100% {background-color: #dcc6c6;}
-            100% {background-color: #f6d9ff;}
-            100% {background-color: #ebdfef;}
 
-        }
-        div{
-            margin-left: 300px;
-        }
-        .n{
-            width: 1000px;
-            margin-left: 300px;
-        }
-
-    </style>
 </head>
+<style>
+    .logo{
+        margin-left: 20px;
+    }
+
+</style>
 <body>
 <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.png" width="200px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <br><br>
     <label path="groups">Generate Groups of </label>
     <input path="groups" type="text"/>
     <button>Go</button>

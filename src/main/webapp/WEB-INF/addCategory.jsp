@@ -10,16 +10,33 @@
 <html>
 <head>
     <title>Add Category</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
+<style>
+
+    .logo{
+        margin-left: 20px;
+    }
+
+</style>
+
 <body>
-<form:form action="/addCategory" method="post" modelAttribute="category">
 
-    <form:label path="name">Name of category</form:label>
-    <%--<form:errors path="title"/>--%>
-    <form:input path="name" type="text"/>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        </nav>
 
-    <form:button>Add</form:button>
-</form:form>
+        <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.png" width="200px"></a>
+
+            <form:form action="/addCategory" method="post" modelAttribute="category">
+
+                <form:label path="name"><h2>Name of category</h2></form:label>
+                <%--<form:errors path="title"/>--%>
+                <form:input path="name" type="text"/>
+                    <br>
+                <form:button>Add</form:button>
+            </form:form>
 </body>
 </html>
 

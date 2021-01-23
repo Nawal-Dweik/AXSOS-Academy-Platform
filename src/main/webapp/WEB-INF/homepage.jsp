@@ -38,16 +38,11 @@
     </nav>
     <br><br>
 <center>
-<<<<<<< HEAD
+
     <div>
-            <a class="navbar-brand" href="#"><img src="/img/alg1.png" width="350px"></a>
-            <a class="navbar-brand" href="#"><img src="/img/alg2.png" width="350px"></a>
+        <a class="navbar-brand" href="/algorithms/showTopics"><img src="/img/alg1.png" width="350px"></a>
+        <a class="navbar-brand" href="/groupActivity/showCategories"><img src="/img/alg2.png" width="350px"></a>
             <a class="navbar-brand" href="/index.html"><img src="/img/alg5.png" width="350px"></a>
-=======
-        <div>
-            <a class="navbar-brand" href="/algorithms/showTopics"><img src="/img/alg1.png" width="350px"></a>
-            <a class="navbar-brand" href="/groupActivity/showCategories"><img src="/img/alg2.png" width="350px"></a>
->>>>>>> 22c8c66554f30e6f93ac7682af1c5f5f558215ad
             <br><br>
             <a class="navbar-brand" href="https://discord.com/"><img src="/img/alg3.png" width="350px"></a>
             <a class="navbar-brand" href="http://learn.codingdojo.com/"><img src="/img/alg4.png" width="350px"></a>

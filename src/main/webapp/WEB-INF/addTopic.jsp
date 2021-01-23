@@ -10,15 +10,32 @@
 <html>
 <head>
     <title>Add Topic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+    .logo{
+        margin-left: 20px;
+
+    }
+
+
+</style>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+</nav>
+
+    <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.png" width="200px"></a>
+
 <form:form action="/addTopic" method="post" modelAttribute="topic">
 
-        <form:label path="title">Title of topic</form:label>
+        <form:label path="title"><h2>Title of topic</h2></form:label>
         <%--<form:errors path="title"/>--%>
     <form:input path="title" type="text"/>
-
+<br>
     <form:button>Add</form:button>
 </form:form>
+
 </body>
 </html>

@@ -10,42 +10,53 @@
 <html>
 <head>
     <title>Categories of Group Activity</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 </head>
+<style>
+    .logo{
+        margin-left: 20px;
+    }
+
+</style>
 <body>
-<label path="groups">Generate Groups of </label>
-<input path="groups" type="text"/>
-<button>Go</button>
-<br/>
-<label path="category">Category</label>
-<select  path="category">
-    <c:forEach items="${allCategories}" var="ctg">
-        <option value="${ctg.id}"><c:out value="${ctg.name}"/></option>
-    </c:forEach>
-</select>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.png" width="200px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        <br><br>
+            <label path="groups">Generate Groups of </label>
+            <input path="groups" type="text"/>
+            <button>Go</button>
+            <br/>
+            <label path="category">Category</label>
+            <select  path="category">
+                <c:forEach items="${allCategories}" var="ctg">
+                    <option value="${ctg.id}"><c:out value="${ctg.name}"/></option>
+                </c:forEach>
+            </select>
 
-<a href="/addCategory">Add a Category</a>
+            <a href="/addCategory">Add a Category</a>
 
-<h2>Categories</h2>
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">Category</th>
-        <th scope="col"></th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${allCategories}" var="c">
-        <tr>
-            <td>${c.name}</td>
-            <td>Delete</td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
+            <h2>Categories</h2>
+                <table class="table">
+                    <thead>
+                         <tr>
+                             <th scope="col">Category</th>
+                             <th scope="col"></th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach items="${allCategories}" var="c">
+                        <tr>
+                            <td>${c.name}</td>
+                            <td>Delete</td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
 
 </body>
 </html>

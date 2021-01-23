@@ -13,13 +13,12 @@
 <body>
 
 
-                <p><form:errors path="user.*"/></p>
-                <c:out value="${error}"/>
+        <p><form:errors path="user.*"/></p>
+        <c:out value="${error}"/>
+
 <%--         registr form--%>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-
-<%--            <h1>Create Account</h1>--%>
 
             <form:form method="POST" action="/registration" modelAttribute="user">
                 <form:label path="name"></form:label>
@@ -33,6 +32,7 @@
 
                 <form:label path="passwordConfirmation" ></form:label>
                 <form:input path="passwordConfirmation" type="password" placeholder="Password Confirmation" />
+                <br>
                 <button input type="submit" value="Register!">Sign Up</button>
             </form:form>
         </div>
