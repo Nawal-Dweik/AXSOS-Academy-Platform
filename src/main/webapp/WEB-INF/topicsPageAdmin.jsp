@@ -38,9 +38,9 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
                 <p class="mini_nav">
-                    <a class="logout" href="/algorithms/showTopics">Morning Algorithm</a>
+                    <a class="logout" href="/algorithmsProcess">Morning Algorithm</a>
 
-                    <a class="logout" href="/groupActivity/showCategories">Group Activity</a>
+                    <a class="logout" href="/groupActivitiesProcess">Group Activity</a>
 
                     <a class="logout" href="/index.html">Lobby</a>
 
