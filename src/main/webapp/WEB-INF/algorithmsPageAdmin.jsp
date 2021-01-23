@@ -52,6 +52,7 @@
 
 
                 <a class="logout" href="/logout">Logout</a>
+                <img src="/img/alg7.png" width="45px">
             </p>
         </nav>
         <br>

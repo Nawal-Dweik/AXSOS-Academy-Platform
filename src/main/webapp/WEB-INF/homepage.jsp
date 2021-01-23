@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
     <title>Axsos Acadmy</title>
@@ -47,8 +49,8 @@
 
                 <a class="logout" href="/index.html">Lobby</a>
 
-
                 <a class="logout" href="/logout">Logout</a>
+                <img src="/img/alg7.png" width="45px">
              </p>
     </nav>
     <br><br>

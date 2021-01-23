@@ -48,7 +48,7 @@
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 </div>
 
-                <span>or use your account</span>
+<%--                <span>or use your account</span>--%>
 
                 <label type="email" for="email" ></label>
                 <input type="text" id="email" name="email" placeholder="Email"/>
