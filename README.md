@@ -7,3 +7,8 @@ It also provides a public chat for all the students who are  using the paltform
 3- Creation for group activities & classification according categories.
 4- Login to system as a student & as admin roles.
 5- Public chat between all the students and admins.
+
+**Contributors:**
+1-Nawal Dweik
+2-Bahaa Hashim
+3-Bara Aqel 
