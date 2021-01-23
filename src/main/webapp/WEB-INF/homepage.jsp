@@ -30,6 +30,9 @@
     .text-center p-3{
         background-color: #f8f9fa!important;
     }
+    a{
+        text-decoration: none;
+    }
 
 </style>
 <body>
@@ -37,29 +40,23 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
 
+            <p class="mini_nav">
+                <a class="logout" href="/algorithms/showTopics">Morning Algorithm</a>
+
+                <a class="logout" href="/groupActivity/showCategories">Group Activity</a>
+
+                <a class="logout" href="/index.html">Lobby</a>
 
 
-                <p class="mini_nav">
-                    <a class="logout" href="/algorithms/showTopics">Morning Algorithm</a>
-
-                    <a class="logout" href="/groupActivity/showCategories">Group Activity</a>
-
-                    <a class="logout" href="/index.html">Lobby</a>
-
-
-                    <a class="logout" href="/logout">Logout</a>
-                 </p>
-
+                <a class="logout" href="/logout">Logout</a>
+             </p>
     </nav>
     <br><br>
 <center>
-
-
     <div>
         <a class="navbar-brand" href="/algorithms/showTopics"><img src="/img/alg1.png" width="350px"></a>
         <a class="navbar-brand" href="/groupActivity/showCategories"><img src="/img/alg2.png" width="350px"></a>
             <a class="navbar-brand" href="/index.html"><img src="/img/alg5.png" width="350px"></a>
-
             <br><br>
             <a class="navbar-brand" href="https://discord.com/"><img src="/img/alg3.png" width="350px"></a>
             <a class="navbar-brand" href="http://learn.codingdojo.com/"><img src="/img/alg4.png" width="350px"></a>
