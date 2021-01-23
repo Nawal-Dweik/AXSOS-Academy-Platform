@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Categories of Group Activity</title>
@@ -31,13 +32,22 @@
             <input path="groups" type="text"/>
             <button>Go</button>
             <br/>
-            <label path="category">Category</label>
-            <select  path="category">
+<form:form action="/groupActivity/new" method="post" modelAttribute="groupActivity">
+
+    <form:label path="title">Group Activity Name</form:label>
+    <form:input path="title"/>
+    <br/>
+    <form:label path="description">Group Activity Description</form:label>
+    <form:textarea path="description"></form:textarea>
+
+            <form:label path="category">Category</form:label>
+            <form:select  path="category">
                 <c:forEach items="${allCategories}" var="ctg">
                     <option value="${ctg.id}"><c:out value="${ctg.name}"/></option>
                 </c:forEach>
-            </select>
-
+            </form:select>
+    <form:button>Add</form:button>
+</form:form>
             <a href="/addCategory">Add a Category</a>
 
             <h2>Categories</h2>

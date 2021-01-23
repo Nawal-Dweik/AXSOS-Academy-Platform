@@ -1,6 +1,7 @@
 package com.axsosacademy.axsosplatform.services;
 
 import com.axsosacademy.axsosplatform.models.Algorithm;
+import com.axsosacademy.axsosplatform.models.Category;
 import com.axsosacademy.axsosplatform.models.GroupActivity;
 import com.axsosacademy.axsosplatform.repositories.CategoryRepository;
 import com.axsosacademy.axsosplatform.repositories.GroupActivityRepository;
@@ -14,7 +15,8 @@ public class GroupActivityService {
         this.groupActivityRepository = groupActivityRepository;
     }
 
-    public GroupActivity createGroupActivity(GroupActivity groupActivity){
+    public GroupActivity createGroupActivity(Category category, GroupActivity groupActivity){
+        category.getGroupActivities().add(groupActivity);
         return groupActivityRepository.save(groupActivity);
     }
 

@@ -75,18 +75,10 @@ public class AdminController {
 
     //Get categories for Group Activity Admin Page
     @GetMapping("/groupActivity/showCategories")
-    public String showCategories(@ModelAttribute("category") Category category, Model model, HttpSession session) {
+    public String showCategories(@ModelAttribute("groupActivity") GroupActivity groupActivity, Model model, HttpSession session) {
         List<Category> allCategories = categoryService.findAllCategories();
         model.addAttribute("allCategories",allCategories);
         return "/categoriesAdminPage.jsp";
-    }
-
-    //Create a new group activity
-    @PostMapping("/groupActivity/new")
-    public String createGroupActivity(@Valid @ModelAttribute("groupActivity") GroupActivity groupActivity, BindingResult result, Model model, HttpSession session, @RequestParam Map<String,String> body) {
-
-        this.groupActivityService.createGroupActivity(groupActivity);
-        return "redirect:/groupActivity/showCategories";
     }
 
     // Add a Category inside categories dropdown
@@ -98,6 +90,13 @@ public class AdminController {
     @PostMapping("/addCategory")
     public String createCategory(@Valid @ModelAttribute("category") Category category, BindingResult result, Model model, HttpSession session, @RequestParam Map<String,String> body) {
         this.categoryService.create(category);
+        return "redirect:/groupActivity/showCategories";
+    }
+
+    //Create a new group activity
+    @PostMapping("/groupActivity/new")
+    public String createGroupActivity(@Valid @ModelAttribute("groupActivity") GroupActivity groupActivity, BindingResult result, Model model, HttpSession session, @RequestParam Map<String,String> body) {
+        this.groupActivityService.createGroupActivity(groupActivity.getCategory(),groupActivity);
         return "redirect:/groupActivity/showCategories";
     }
 
