@@ -2,13 +2,14 @@
 ####Axsos Academy Platform is a paltform allows the instructors to upload the algorithms questions and solutions, and generate group activities.
 It also provides a public chat for all the students who are  using the paltform
 #### The main features of the project:
-1- Connecting the Coding dojo , Discord, Axsos academy website all together with the paltform.
-2- Creation for morning algorithms & classification according topics.
-3- Creation for group activities & classification according categories.
-4- Login to system as a student & as admin roles.
-5- Public chat between all the students and admins.
+- Connecting the Coding dojo , Discord, Axsos academy website all together with the paltform.
+- Creation for morning algorithms & classification according topics.
+- Creation for group activities & classification according categories.
+- Login to system as a student & as admin roles.
+- Public chat between all the students and admins.
 
 **Contributors:**
-1-Nawal Dweik
-2-Bahaa Hashim
-3-Bara Aqel 
+- Bahaa Hahim
+- Nawal Dweik
+- Bara Aqel
+
