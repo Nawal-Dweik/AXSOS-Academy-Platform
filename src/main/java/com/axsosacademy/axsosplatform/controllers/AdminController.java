@@ -158,5 +158,19 @@ public class AdminController {
         return "singleGroupActivity.jsp";
     }
 
+    //delete group activity
+    @GetMapping("/groupActivities/{categoryId}/{groupActivityId}/delete")
+    public String deleteGroupActivity(@ModelAttribute("GroupActivity") GroupActivity groupActivity,@PathVariable("groupActivityId") Long id,@PathVariable("categoryId") Long categoryId, Model model, HttpSession session) {
+        groupActivityService.deleteGroupActivity(id);
+        return "redirect:/groupActivities/{categoryId}";
+    }
+
+    //delete category
+    @GetMapping("/groupActivities/{categoryId}/delete")
+    public String deleteCategory(@ModelAttribute("groupActivity") GroupActivity groupActivity,@PathVariable("categoryId") Long categoryId, Model model, HttpSession session) {
+        categoryService.deleteCategory(categoryId);
+        return "redirect:/groupActivitiesProcess";
+    }
+
 
 }

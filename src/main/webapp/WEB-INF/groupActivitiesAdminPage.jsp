@@ -63,7 +63,7 @@
                 <tr>
                     <td>${ga.title}</td>
                     <td><a href="/groupActivity/${ga.id}">View</a></td>
-                    <td>Delete</td>
+                    <td><a href="/groupActivities/${selectedCategory.id}/${ga.id}/delete">Delete</a></td>
                 </tr>
             </c:forEach>
             </tbody>

@@ -82,7 +82,7 @@
                     <c:forEach items="${allCategories}" var="c">
                         <tr>
                             <td><a href="/groupActivities/${c.id}">${c.name}</a></td>
-                            <td>Delete</td>
+                            <td><a href="/groupActivities/${c.id}/delete">Delete1</a></td>
                         </tr>
                     </c:forEach>
                     </tbody>

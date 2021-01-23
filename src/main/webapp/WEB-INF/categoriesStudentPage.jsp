@@ -56,14 +56,12 @@
                     <thead>
                          <tr>
                              <th scope="col">Category</th>
-                             <th scope="col"></th>
                          </tr>
                     </thead>
                     <tbody>
                     <c:forEach items="${allCategories}" var="c">
                         <tr>
                             <td><a href="/groupActivities/${c.id}">${c.name}</a></td>
-                            <td>Delete</td>
                         </tr>
                     </c:forEach>
                     </tbody>
