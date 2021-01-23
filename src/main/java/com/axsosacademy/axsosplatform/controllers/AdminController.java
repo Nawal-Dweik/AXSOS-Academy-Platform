@@ -110,6 +110,13 @@ public class AdminController {
         return "/groupActivitiesAdminPage.jsp";
     }
 
+    //Get group activity for a specific category Admin Page
+    @RequestMapping("/groupActivity/{groupActivityId}")
+    public String showSelectedGroupActivity(@ModelAttribute("groupActivity") GroupActivity groupActivity,@PathVariable("groupActivityId") Long id, Model model, HttpSession session) {
+        GroupActivity selectedGroupActivity = groupActivityService.findOneById(id);
+        model.addAttribute("selectedGroupActivity",selectedGroupActivity);
+        return "singleGroupActivity.jsp";
+    }
 
 
 }
