@@ -64,5 +64,9 @@ public class TopicService {
         }
     }
 
+    public void deleteCategory(Long id){
+        topicRepository.deleteById(id);
+    }
+
 
 }

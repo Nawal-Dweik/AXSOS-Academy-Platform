@@ -75,7 +75,7 @@
             <td>${alg.title}</td>
             <td>Download</td>
             <td>Download</td>
-            <td>Delete</td>
+            <td><a href="/algorithms/${selectedTopic.id}/${alg.id}/delete">Delete</a></td>
         </tr>
     </c:forEach>
     </tbody>

@@ -99,7 +99,7 @@
             <c:forEach items="${allTopics}" var="t">
             <tr>
                 <td><a href="/algorithms/${t.id}">${t.title}</a></td>
-                <td>Delete</td>
+                <td><a href="/algorithms/${t.id}/delete">Delete</a></td>
             </tr>
             </c:forEach>
             </tbody>

@@ -32,4 +32,8 @@ public class GroupActivityService {
         }
     }
 
+    public void deleteCategory(Long id){
+        groupActivityRepository.deleteById(id);
+    }
+
 }

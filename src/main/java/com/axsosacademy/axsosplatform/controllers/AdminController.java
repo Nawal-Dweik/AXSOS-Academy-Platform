@@ -86,7 +86,19 @@ public class AdminController {
         return "/algorithmsPageAdmin.jsp";
     }
 
+    //delete algorithm
+    @GetMapping("/algorithms/{topicId}/{algorithmId}/delete")
+    public String deleteAlgorithms(@ModelAttribute("algorithm") Algorithm algorithm,@PathVariable("algorithmId") Long id,@PathVariable("topicId") Long topicId, Model model, HttpSession session) {
+    algorithmService.deleteAlgorithm(id);
+        return "redirect:/algorithms/{topicId}";
+    }
 
+    //delete topic
+    @GetMapping("/algorithms/{topicId}/delete")
+    public String deleteTopic(@ModelAttribute("algorithm") Algorithm algorithm,@PathVariable("topicId") Long topicId, Model model, HttpSession session) {
+        topicService.deleteTopic(topicId);
+        return "redirect:/algorithmsProcess";
+    }
     //***********************************************************************************************
     //Admin Group Activity Process
 

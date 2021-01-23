@@ -38,4 +38,8 @@ public class CategoryService {
             return null;
         }
     }
+
+    public void deleteCategory(Long id){
+        categoryRepository.deleteById(id);
+    }
 }

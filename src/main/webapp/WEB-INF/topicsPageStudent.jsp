@@ -61,14 +61,14 @@
         <thead>
         <tr>
             <th scope="col">Title</th>
-            <th scope="col"></th>
+
         </tr>
         </thead>
         <tbody>
         <c:forEach items="${allTopics}" var="t">
         <tr>
             <td><a href="/algorithms/${t.id}">${t.title}</a></td>
-            <td>Delete</td>
+
         </tr>
         </c:forEach>
         </tbody>
