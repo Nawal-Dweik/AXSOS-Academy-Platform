@@ -100,6 +100,16 @@ public class AdminController {
         return "redirect:/groupActivity/showCategories";
     }
 
+    //Get group activity for a specific category Admin Page
+    @GetMapping("/groupActivities/{categoryId}")
+    public String showGroupActivities(@ModelAttribute("groupActivity") GroupActivity groupActivity,@PathVariable("categoryId") Long id, Model model, HttpSession session) {
+        Category selectedCategory = categoryService.findOneById(id);
+        List<GroupActivity> categoryGroupActivities = selectedCategory.getGroupActivities();
+        model.addAttribute("categoryGroupActivities",categoryGroupActivities);
+        model.addAttribute("selectedCategory",selectedCategory);
+        return "/groupActivitiesAdminPage.jsp";
+    }
+
 
 
 }
