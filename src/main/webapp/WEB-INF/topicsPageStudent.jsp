@@ -15,13 +15,49 @@
 
 </head>
 <style>
+
     .logo{
         margin-left: 20px;
     }
+    .logout{
+        margin: 0px 70px;
+        color: gray;
+        text-decoration: none;
+    }
+
+    p{
+        margin-top: 0 !important;
+        margin-bottom: 0rem !important;
+        margin-inline: auto !important;
+    }
+    .table{
+        width: 71% !important;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
 
 </style>
 <body>
-    <table class="n table table-striped">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
+
+    <p class="mini_nav">
+        <a class="logout" href="/algorithms/showTopics">Morning Algorithm</a>
+
+        <a class="logout" href="/groupActivity/showCategories">Group Activity</a>
+
+        <a class="logout" href="/index.html">Lobby</a>
+
+        <a class="logout" href="/logout">Logout</a>
+        <img src="/img/alg7.png" width="45px">
+    </p>
+</nav>
+<br><br>
+<center>
+    <table class="table table-bordered">
         <thead>
         <tr>
             <th scope="col">Title</th>
@@ -37,5 +73,6 @@
         </c:forEach>
         </tbody>
     </table>
+</center>
 </body>
 </html>
