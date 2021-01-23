@@ -1,10 +1,7 @@
 package com.axsosacademy.axsosplatform.controllers;
 
 import com.axsosacademy.axsosplatform.models.*;
-import com.axsosacademy.axsosplatform.services.AlgorithmService;
-import com.axsosacademy.axsosplatform.services.CategoryService;
-import com.axsosacademy.axsosplatform.services.GroupActivityService;
-import com.axsosacademy.axsosplatform.services.TopicService;
+import com.axsosacademy.axsosplatform.services.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,19 +18,39 @@ public class AdminController {
     private final TopicService topicService;
     private final CategoryService categoryService;
     private final GroupActivityService groupActivityService;
+    private final UserService userService;
+    private final RoleService roleService;
 
-    public AdminController(AlgorithmService algorithmService, TopicService topicService, CategoryService categoryService, GroupActivityService groupActivityService) {
+    public AdminController(AlgorithmService algorithmService, TopicService topicService, CategoryService categoryService, GroupActivityService groupActivityService, UserService userService, RoleService roleService) {
         this.algorithmService = algorithmService;
         this.topicService = topicService;
         this.categoryService = categoryService;
         this.groupActivityService = groupActivityService;
+        this.userService = userService;
+        this.roleService = roleService;
+    }
+
+    public Long userSessionId(HttpSession session) {
+        if(session.getAttribute("userId") == null)
+            return null;
+        return (Long)session.getAttribute("userId");
     }
 
     //***********************************************************************************************
     //Admin Algorithm Process
 
+    //Check Role
+    @GetMapping("/algorithmsProcess")
+    public String checkRoleForAlgorithm(@ModelAttribute("algorithm") Algorithm algorithm, Model model, HttpSession session) {
+        Long userId = this.userSessionId(session);
+        User user = this.userService.findUser(userId);
+        if(user.isAdmin()){
+            return "redirect:/admin/algorithms/showTopics";
+        }
+        return "redirect:/student/algorithms/showTopics";
+    }
     //Get topics for Algorithm Admin Page
-    @GetMapping("/algorithms/showTopics")
+    @GetMapping("/admin/algorithms/showTopics")
     public String showTopics(@ModelAttribute("algorithm") Algorithm algorithm, Model model, HttpSession session) {
         List<Topic> allTopics = topicService.findAllTopics();
         model.addAttribute("allTopics",allTopics);
@@ -73,8 +90,19 @@ public class AdminController {
     //***********************************************************************************************
     //Admin Group Activity Process
 
+    //Check Role
+    @GetMapping("/groupActivitiesProcess")
+    public String checkRoleForGroupActivity(@ModelAttribute("groupActivity") GroupActivity groupActivity, Model model, HttpSession session) {
+        Long userId = this.userSessionId(session);
+        User user = this.userService.findUser(userId);
+        if(user.isAdmin()){
+            return "redirect:/admin/groupActivity/showCategories";
+        }
+        return "redirect:/student/groupActivity/showCategories";
+    }
+
     //Get categories for Group Activity Admin Page
-    @GetMapping("/groupActivity/showCategories")
+    @GetMapping("/admin/groupActivity/showCategories")
     public String showCategories(@ModelAttribute("groupActivity") GroupActivity groupActivity, Model model, HttpSession session) {
         List<Category> allCategories = categoryService.findAllCategories();
         model.addAttribute("allCategories",allCategories);
