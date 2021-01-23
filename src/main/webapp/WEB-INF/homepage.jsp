@@ -41,8 +41,8 @@
 
 
     <div>
-        <a class="navbar-brand" href="/algorithms/showTopics"><img src="/img/alg1.png" width="350px"></a>
-        <a class="navbar-brand" href="/groupActivity/showCategories"><img src="/img/alg2.png" width="350px"></a>
+        <a class="navbar-brand" href="/algorithmsProcess"><img src="/img/alg1.png" width="350px"></a>
+        <a class="navbar-brand" href="/groupActivitiesProcess"><img src="/img/alg2.png" width="350px"></a>
             <a class="navbar-brand" href="/index.html"><img src="/img/alg5.png" width="350px"></a>
 
             <br><br>

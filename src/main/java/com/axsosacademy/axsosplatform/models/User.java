@@ -20,6 +20,8 @@ public class User {
     private String password;
     @Transient
     private String passwordConfirmation;
+
+    private boolean isAdmin;
     @Column(updatable = false)
     private Date createdAt;
     private Date updatedAt;
@@ -57,14 +59,19 @@ public class User {
     @JoinColumn(name="algorithmUser_id")
     private GroupActivity groupActivity;
 
-    public  User(){}
+    public  User(){
+    }
 
-    public User(String name, String email, String password, String passwordConfirmation, Role role) {
+    public User(@Size(min = 1, message = "Name must not be empty") String name, @Pattern(regexp = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]+$", message = "Invalid email pattern") String email, @Size(min = 8, message = "Password must be at least 8 characters") String password, String passwordConfirmation, Role role, List<Message> messages, Algorithm algorithm, GroupActivity groupActivity) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.passwordConfirmation = passwordConfirmation;
         this.role = role;
+        this.messages = messages;
+        this.algorithm = algorithm;
+        this.groupActivity = groupActivity;
+        this.isAdmin = false;
     }
 
     public Long getId() {
@@ -153,5 +160,13 @@ public class User {
 
     public void setGroupActivity(GroupActivity groupActivity) {
         this.groupActivity = groupActivity;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 }
