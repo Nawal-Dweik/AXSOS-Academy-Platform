@@ -30,7 +30,7 @@
     <c:forEach items="${categoryGroupActivities}" var="ga">
         <tr>
             <td>${ga.title}</td>
-            <td>View</td>
+            <td><a href="/groupActivity/${ga.id}">View</a></td>
             <td>Delete</td>
         </tr>
     </c:forEach>
