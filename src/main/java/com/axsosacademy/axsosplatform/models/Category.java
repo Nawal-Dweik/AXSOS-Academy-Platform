@@ -31,7 +31,7 @@ public class Category {
         this.updatedAt = new Date();
     }
 
-    @OneToMany(mappedBy="category", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy="category", fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
     private List<GroupActivity> groupActivities;
 
     public Category() {
