@@ -46,15 +46,10 @@
     <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
 
     <p class="mini_nav">
-<<<<<<< HEAD
-        <a class="logout" href="/algorithmsProcess">Morning Algorithm</a>
 
-        <a class="logout" href="/groupActivitiesProcess">Group Activity</a>
-=======
         <a style="color: white !important;" class="logout" href="/algorithmsProcess">Morning Algorithm</a>
 
         <a style="color: white !important;" class="logout" href="/groupActivitiesProcess">Group Activity</a>
->>>>>>> 358562723ac38923b278495714bfa5da2f580fc5
 
         <a style="color: white !important;" class="logout" href="/index.html">Lobby</a>
 
@@ -82,25 +77,15 @@
         </tbody>
     </table>
 </center>
-<<<<<<< HEAD
-<br><br><br><br><br>
-<footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center p-3">
-        © 2021 Copyright:
-        <a class="text-dark" href="https://academy.axsos.ps/">Axsos Acadmy</a>
-=======
-<br/>
-<br/>
+
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgb(56, 56, 56); color: white;">
-        © 2021 Copyright:
-        <a class="text-dark" href="https://academy.axsos.ps/" style="color: white !important;">Axsos Acadmy</a>
->>>>>>> 358562723ac38923b278495714bfa5da2f580fc5
-    </div>
-    <!-- Copyright -->
-</footer>
+        <footer class="bg-light text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgb(56, 56, 56); color: white;">
+                © 2021 Copyright:
+                <a class="text-dark" href="https://academy.axsos.ps/" style="color: white !important;">Axsos Acadmy</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
 </body>
 </html>

@@ -40,15 +40,11 @@
         <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
 
         <p class="mini_nav">
-<<<<<<< HEAD
-            <a class="logout" href="/algorithmsProcess">Morning Algorithm</a>
 
-            <a class="logout" href="/groupActivitiesProcess">Group Activity</a>
-=======
             <a style="color: white !important;" class="logout" href="/algorithmsProcess">Morning Algorithm</a>
 
             <a style="color: white !important;" class="logout" href="/groupActivitiesProcess">Group Activity</a>
->>>>>>> 358562723ac38923b278495714bfa5da2f580fc5
+
 
             <a style="color: white !important;" class="logout" href="/index.html">Lobby</a>
 
@@ -76,16 +72,7 @@
                     </tbody>
                 </table>
 </center>
-<<<<<<< HEAD
-        <footer class="bg-light text-center text-lg-start">
-            <!-- Copyright -->
-            <div class="text-center p-3">
-                © 2021 Copyright:
-                <a class="text-dark" href="https://academy.axsos.ps/">Axsos Acadmy</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-=======
+
 <br/>
 <br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -97,6 +84,5 @@
     </div>
     <!-- Copyright -->
 </footer>
->>>>>>> 358562723ac38923b278495714bfa5da2f580fc5
 </body>
 </html>

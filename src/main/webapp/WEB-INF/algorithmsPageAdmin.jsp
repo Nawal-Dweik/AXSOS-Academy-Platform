@@ -83,18 +83,8 @@
     </tbody>
 </table>
 </center>
-<<<<<<< HEAD
-    <br><br><br><br><br><br>
-        <footer class="bg-light text-center text-lg-start">
-            <!-- Copyright -->
-            <div class="text-center p-3">
-                © 2021 Copyright:
-                <a class="text-dark" href="https://academy.axsos.ps/">Axsos Acadmy</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-=======
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgb(56, 56, 56); color: white;">
@@ -103,6 +93,6 @@
     </div>
     <!-- Copyright -->
 </footer>
->>>>>>> 358562723ac38923b278495714bfa5da2f580fc5
+
 </body>
 </html>
