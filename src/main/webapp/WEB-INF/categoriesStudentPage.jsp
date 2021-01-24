@@ -4,8 +4,9 @@
 <html>
 <head>
     <title>Categories of Group Activity</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <style>
 
@@ -35,17 +36,25 @@
 </style>
 <body>
 <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: rgb(56, 56, 56) !important;">
         <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
+
         <p class="mini_nav">
+<<<<<<< HEAD
             <a class="logout" href="/algorithmsProcess">Morning Algorithm</a>
 
             <a class="logout" href="/groupActivitiesProcess">Group Activity</a>
+=======
+            <a style="color: white !important;" class="logout" href="/algorithmsProcess">Morning Algorithm</a>
 
-            <a class="logout" href="/index.html">Lobby</a>
+            <a style="color: white !important;" class="logout" href="/groupActivitiesProcess">Group Activity</a>
+>>>>>>> 358562723ac38923b278495714bfa5da2f580fc5
 
-            <a class="logout" href="/logout">Logout</a>
+            <a style="color: white !important;" class="logout" href="/index.html">Lobby</a>
+
+            <a style="color: white !important;" class="logout" href="/logout">Logout</a>
             <img src="/img/alg7.png" width="45px">
+
         </p>
     </nav>
 </div>
@@ -56,19 +65,18 @@
                     <thead>
                          <tr>
                              <th scope="col">Category</th>
-                             <th scope="col"></th>
                          </tr>
                     </thead>
                     <tbody>
                     <c:forEach items="${allCategories}" var="c">
                         <tr>
                             <td><a href="/groupActivities/${c.id}">${c.name}</a></td>
-                            <td>Delete</td>
                         </tr>
                     </c:forEach>
                     </tbody>
                 </table>
 </center>
+<<<<<<< HEAD
         <footer class="bg-light text-center text-lg-start">
             <!-- Copyright -->
             <div class="text-center p-3">
@@ -77,5 +85,18 @@
             </div>
             <!-- Copyright -->
         </footer>
+=======
+<br/>
+<br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgb(56, 56, 56); color: white;">
+        © 2021 Copyright:
+        <a class="text-dark" href="https://academy.axsos.ps/" style="color: white !important;">Axsos Acadmy</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+>>>>>>> 358562723ac38923b278495714bfa5da2f580fc5
 </body>
 </html>

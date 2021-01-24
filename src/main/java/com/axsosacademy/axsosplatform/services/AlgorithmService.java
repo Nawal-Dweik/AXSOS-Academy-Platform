@@ -25,5 +25,9 @@ public class AlgorithmService {
         return algorithmRepository.save(algorithm);
     }
 
+    public void deleteAlgorithm(Long id){
+        algorithmRepository.deleteById(id);
+    }
+
 
 }

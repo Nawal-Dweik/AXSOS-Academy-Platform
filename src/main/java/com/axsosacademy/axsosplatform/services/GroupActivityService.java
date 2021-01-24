@@ -32,4 +32,8 @@ public class GroupActivityService {
         }
     }
 
+    public void deleteGroupActivity(Long id){
+        groupActivityRepository.deleteById(id);
+    }
+
 }

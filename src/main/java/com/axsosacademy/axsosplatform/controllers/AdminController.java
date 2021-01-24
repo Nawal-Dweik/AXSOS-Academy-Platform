@@ -86,7 +86,19 @@ public class AdminController {
         return "/algorithmsPageAdmin.jsp";
     }
 
+    //delete algorithm
+    @GetMapping("/algorithms/{topicId}/{algorithmId}/delete")
+    public String deleteAlgorithms(@ModelAttribute("algorithm") Algorithm algorithm,@PathVariable("algorithmId") Long id,@PathVariable("topicId") Long topicId, Model model, HttpSession session) {
+    algorithmService.deleteAlgorithm(id);
+        return "redirect:/algorithms/{topicId}";
+    }
 
+    //delete topic
+    @GetMapping("/algorithms/{topicId}/delete")
+    public String deleteTopic(@ModelAttribute("algorithm") Algorithm algorithm,@PathVariable("topicId") Long topicId, Model model, HttpSession session) {
+        topicService.deleteTopic(topicId);
+        return "redirect:/algorithmsProcess";
+    }
     //***********************************************************************************************
     //Admin Group Activity Process
 
@@ -144,6 +156,20 @@ public class AdminController {
         GroupActivity selectedGroupActivity = groupActivityService.findOneById(id);
         model.addAttribute("selectedGroupActivity",selectedGroupActivity);
         return "singleGroupActivity.jsp";
+    }
+
+    //delete group activity
+    @GetMapping("/groupActivities/{categoryId}/{groupActivityId}/delete")
+    public String deleteGroupActivity(@ModelAttribute("GroupActivity") GroupActivity groupActivity,@PathVariable("groupActivityId") Long id,@PathVariable("categoryId") Long categoryId, Model model, HttpSession session) {
+        groupActivityService.deleteGroupActivity(id);
+        return "redirect:/groupActivities/{categoryId}";
+    }
+
+    //delete category
+    @GetMapping("/groupActivities/{categoryId}/delete")
+    public String deleteCategory(@ModelAttribute("groupActivity") GroupActivity groupActivity,@PathVariable("categoryId") Long categoryId, Model model, HttpSession session) {
+        categoryService.deleteCategory(categoryId);
+        return "redirect:/groupActivitiesProcess";
     }
 
 

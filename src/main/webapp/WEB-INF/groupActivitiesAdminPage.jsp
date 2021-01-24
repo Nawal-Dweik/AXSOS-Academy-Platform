@@ -4,7 +4,9 @@
 <html>
 <head>
     <title>Group Activities Page</title>
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <style>
     .logo{
@@ -31,22 +33,21 @@
 
 </style>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: rgb(56, 56, 56) !important;">
+    <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
 
-                <p class="mini_nav">
-                    <a class="logout" href="/algorithmsProcess">Morning Algorithm</a>
+    <p class="mini_nav">
+        <a style="color: white !important;" class="logout" href="/algorithmsProcess">Morning Algorithm</a>
 
-                    <a class="logout" href="/groupActivitiesProcess">Group Activity</a>
+        <a style="color: white !important;" class="logout" href="/groupActivitiesProcess">Group Activity</a>
 
-                    <a class="logout" href="/index.html">Lobby</a>
+        <a style="color: white !important;" class="logout" href="/index.html">Lobby</a>
 
+        <a style="color: white !important;" class="logout" href="/logout">Logout</a>
+        <img src="/img/alg7.png" width="45px">
 
-                    <a class="logout" href="/logout">Logout</a>
-                    <img src="/img/alg7.png" width="45px">
-                </p>
-
-        </nav>
+    </p>
+</nav>
         <br>
 <center>
         <h2>${selectedCategory.name}</h2>
@@ -63,19 +64,20 @@
                 <tr>
                     <td>${ga.title}</td>
                     <td><a href="/groupActivity/${ga.id}">View</a></td>
-                    <td>Delete</td>
+                    <td><a href="/groupActivities/${selectedCategory.id}/${ga.id}/delete">Delete</a></td>
                 </tr>
             </c:forEach>
             </tbody>
         </table>
 </center>
-        <footer class="bg-light text-center text-lg-start">
-            <!-- Copyright -->
-            <div class="text-center p-3">
-                © 2021 Copyright:
-                <a class="text-dark" href="https://academy.axsos.ps/">Axsos Acadmy</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgb(56, 56, 56); color: white;">
+        © 2021 Copyright:
+        <a class="text-dark" href="https://academy.axsos.ps/" style="color: white !important;">Axsos Acadmy</a>
+    </div>
+    <!-- Copyright -->
+</footer>
 </body>
 </html>
