@@ -24,16 +24,16 @@
 
 </style>
 
-<body>
+<body style="background-image: url(/img/students.jpg);background-repeat: no-repeat; background-size: cover;">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         </nav>
 
         <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
 
-            <form:form action="/addCategory" method="post" modelAttribute="category">
+            <form:form action="/addCategory" method="post" modelAttribute="category" cssStyle="background-color: #ffffff8f;">
 
-                <form:label path="name"><h2>Name of category</h2></form:label>
+                <form:label path="name" ><h2>Name of category</h2></form:label>
                 <%--<form:errors path="title"/>--%>
                 <form:input path="name" type="text"/>
                     <br>

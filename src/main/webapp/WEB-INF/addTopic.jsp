@@ -23,14 +23,14 @@
 
 
 </style>
-<body>
+<body style="background-image: url(/img/students.jpg);background-repeat: no-repeat; background-size: cover;">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 </nav>
 
     <a class="navbar-brand" href="/home"><img class="logo" src="/img/logo.png" width="200px"></a>
 
-<form:form action="/addTopic" method="post" modelAttribute="topic">
+<form:form action="/addTopic" method="post" modelAttribute="topic" cssStyle="background-color: #ffffff8f;">
 
         <form:label path="title"><h2>Title of topic</h2></form:label>
         <%--<form:errors path="title"/>--%>
