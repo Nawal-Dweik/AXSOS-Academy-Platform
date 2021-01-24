@@ -4,7 +4,9 @@
 <html>
 <head>
     <title>Categories of Group Activity</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <style>
     .logo{
@@ -50,7 +52,7 @@
 <center>
             <label path="groups">Generate Groups of </label>
             <input path="groups" type="text"/>
-            <button class="btn btn-primary">Go</button>
+            <button class="btn btn-primary" style="background-color: #691489;">Go</button>
             <br><br>
             <form:form action="/groupActivity/new" method="post" modelAttribute="groupActivity">
 
@@ -66,9 +68,9 @@
                     <option value="${ctg.id}"><c:out value="${ctg.name}"/></option>
                 </c:forEach>
             </form:select>
-             <button class="btn btn-primary">Add</button>
+             <button style="background-color: #691489" class="btn btn-primary">Add</button>
         </form:form>
-            <button class="btn btn-primary"><a href="/addCategory" style="color: white">Add a Category</a></button>
+            <button style="background-color: #691489" class="btn btn-primary"><a href="/addCategory" style="color: white">Add a Category</a></button>
             <br><br>
             <h2>Categories</h2>
                 <table class="table table-bordered">
@@ -82,7 +84,7 @@
                     <c:forEach items="${allCategories}" var="c">
                         <tr>
                             <td><a href="/groupActivities/${c.id}">${c.name}</a></td>
-                            <td><a href="/groupActivities/${c.id}/delete">Delete1</a></td>
+                            <td><a href="/groupActivities/${c.id}/delete">Delete</a></td>
                         </tr>
                     </c:forEach>
                     </tbody>

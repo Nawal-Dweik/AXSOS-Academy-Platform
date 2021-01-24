@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 </head>
-<body>
+<body style="background-image: url('/img/bgd.jpg');">
 
 
         <p><form:errors path="user.*"/></p>
