@@ -9,9 +9,9 @@
 - Public chat between all the students and admins.
 
 **Contributors:**
-- Bahaa Hahim
-- Nawal Dweik
 - Bara Aqel
+- Nawal Dweik
+- Bahaa Hahim
 
 ![Home Page](https://github.com/BahaaHahim/AxsosAcademyPlateform/blob/master/screens/Axsos%20Academy%20omePage.PNG)
 
