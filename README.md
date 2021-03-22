@@ -24,7 +24,7 @@
 
 * The home page contains multiple tabs, Morning algorithm, the group activity & the lobby. The instructors can add algorithms that are devided according shared topics, which contains a small problem to be solved using algorithm, after the morning algorithm time finish instructors can upload the ideal solution for that algoritm, instructors also can add group activities to be solved as groups of students which also classified according to their categories. The student at the same time can access and view all the algorithms and group activities that was uploaded by instructors. Instructors and students can chat in a real-time chat with each other using the lobby file.*
 
-![homePage](https://github.com/Nawal-Dweik/AXSOS-Academy-Platform/blob/master/screenshots/homePage.PNG)
+![homepage](https://github.com/Nawal-Dweik/AXSOS-Academy-Platform/blob/master/screenshots/homepage.PNG)
 
 ![addCategory](https://github.com/Nawal-Dweik/AXSOS-Academy-Platform/blob/master/screenshots/addCategory.PNG)
 
