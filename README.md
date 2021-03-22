@@ -1,4 +1,4 @@
-# AxsosAcademyPlatform
+# Axsos Academy Platform
 
 *Axsos Academy Platform is a paltform allows the instructors to upload the algorithms questions and solutions, and generate group activities*
 
